@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aventura - Marketplace</title>
+  <link rel="stylesheet" href="aventura.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <div class="main-panel">
+    <div class="panel-content">
+    <div class="banner">
+        <img src="images/RDR_Banner.jpg" alt="Banner de aventura">
+        
+        
+        
+        <div class="gray-card animate__animated animate__fadeInLeft">
+          <img src="images/RDR_Logo.png" alt="Banner de aventura">
+         
+          <div class="precio-edicion">
+            <h2 class="juego-precio" id="precio">$71.46</h2>
+
+            <div class="juego-edicion">
+              <select id="edicion">
+                <option value="71.46">Standard Edition</option>
+                <option value="89.99">Deluxe Edition</option>
+                <option value="109.99">Collector’s Edition</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="juego-etiquetas">
+            <span class="tag">Acción</span>
+            <span class="tag">Aventura</span>
+            <span class="tag">Un jugador</span>
+          </div>
+
+          <div class="desc">
+            <p class="juego-descripcion">
+            Descubre la historia del exforajido John Marston mientras busca a los últimos miembros vivos de la famosa banda de Van der Linde en el debut en PC del aclamado predecesor de Red Dead Redemption 2. Vive una experiencia épica en este nuevo título lleno de acción, aventuras y decisiones que cambiarán el destino del mundo.
+          </p>
+            
+          </div>
+          
+
+          <button class="btn add-cart">
+            Añadir al carrito
+          </button>
+
+          <button class="btn buy-now">
+            Comprar ahora
+          </button>
+
+        </div>
+
+      <div class="banner-overlay"></div>
+      </div>
+      <p style="margin-bottom: 1000px;"></p>
+    </div>
+  </div>
+
+
+<div class="volver-btn" id="volverBtn">
+  <span class="volver-text">Volver</span>
+  <span class="volver-icon">⟵</span>
+</div>
+
+
+  <script src="aventura.js"></script>
+</body>
+</html>

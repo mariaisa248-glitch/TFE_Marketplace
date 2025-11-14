@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollador - Boost</title>
+  <link rel="stylesheet" href="desarrollador.css" />
+</head>
+<body>
+  <div class="main-panel">
+    <div class="panel-content">
+      <div class="banner">
+        <img id="dev-banner-img" src="images/RDR_Banner.jpg" alt="Banner de aventura">
+
+        <div class="edit-controls banner-controls">
+          <label class="file-label">
+            Cambiar banner
+            <input id="banner-file" type="file" accept="image/*">
+          </label>
+          <button id="banner-reset" class="small-btn">Restablecer</button>
+        </div>
+
+        <div class="gray-card animate__animated animate__fadeInLeft">
+
+          <img id="dev-logo-img" src="images/RDR_Logo.png" alt="Logo del juego">
+          <div class="logo-controls">
+            <label class="file-label small">
+              Cambiar logo
+              <input id="logo-file" type="file" accept="image/*">
+            </label>
+            <button id="logo-reset" class="small-btn">Restablecer</button>
+          </div>
+
+          <div class="precio-edicion">
+            <h2 class="juego-precio" id="precio">$71.46</h2>
+
+            <div class="juego-edicion">
+                <label for="edicion">Edición:</label>
+                <select id="edicion">
+                <option value="standard">Standard Edition</option>
+                <option value="deluxe">Deluxe Edition</option>
+                <option value="collector">Collector’s Edition</option>
+                </select>
+            </div>
+          </div>
+
+        <div class="editar-precios">
+            <h3>Editar precios:</h3>
+            <label>Standard: <input type="number" id="price-standard" step="0.01" /></label>
+            <label>Deluxe: <input type="number" id="price-deluxe" step="0.01" /></label>
+            <label>Collector’s: <input type="number" id="price-collector" step="0.01" /></label>
+        </div>
+
+          <div class="juego-etiquetas" id="tags-container">
+            <span class="tag">Acción</span>
+            <span class="tag">Aventura</span>
+            <span class="tag">Un jugador</span>
+          </div>
+
+          <div class="tag-controls">
+            <select class="tag-select" id="tag-select-1"></select>
+            <select class="tag-select" id="tag-select-2"></select>
+            <select class="tag-select" id="tag-select-3"></select>
+            <button id="tags-save" class="small-btn">Guardar etiquetas</button>
+          </div>
+
+          <div class="desc">
+            <textarea class="juego-descripcion" id="editable-descripcion">
+                Descubre la historia del exforajido John Marston mientras busca a los últimos miembros vivos de la famosa banda de Van der Linde en el debut en PC del aclamado predecesor de Red Dead Redemption 2. Vive una experiencia épica en este nuevo título lleno de acción, aventuras y decisiones que cambiarán el destino del mundo.
+            </textarea>
+          </div>
+
+          <button class="btn add-cart">
+            Añadir al carrito
+          </button>
+
+          <button class="btn buy-now">
+            Comprar ahora
+          </button>
+
+          <div class="btn-gradient-controls">
+            <p>Gradiente de botones:</p>
+            <div class="color-pickers">
+                <label>
+                Color inicial
+                <input type="color" id="grad-color-start" value="#493636">
+                </label>
+                <label>
+                Color final
+                <input type="color" id="grad-color-end" value="#6e1212">
+                </label>
+                <button id="grad-save" class="small-btn">Aplicar</button>
+                <button id="grad-reset" class="small-btn">Restablecer</button>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="banner-overlay"></div>
+      </div>
+
+      <p style="margin-bottom: 1000px;"></p>
+    </div>
+  </div>
+
+  <div class="volver-btn" id="volverBtn">
+    <span class="volver-text">Volver</span>
+    <span class="volver-icon">⟵</span>
+  </div>
+
+  <script src="desarrollador.js"></script>
+</body>
+</html>

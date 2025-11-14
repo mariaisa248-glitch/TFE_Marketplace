@@ -1,0 +1,416 @@
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.main-panel {
+  background-color: #252427;
+  border-radius: 24px;
+  width: 95%;
+  height: 95%;
+  position: relative;
+  box-shadow: 0 0 60px rgba(189, 48, 48, 0.507);
+  overflow: hidden;
+  animation: fadeInPanel 1s ease forwards;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+@keyframes fadeInPanel {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.97);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.gray-card {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 35%;
+  padding: 30px;
+  background: rgba(163, 163, 163, 0.336);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  --animate-duration: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: auto; 
+  max-height: 50rem; 
+  overflow-y: auto;
+}
+
+.panel-content {
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.panel-content::-webkit-scrollbar {
+  width: 8px;
+  display: none;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.3rem;
+  color: #00475d;
+}
+
+.volver-btn {
+  position: fixed;
+  top: 20px;
+  left: -50px;
+  display: flex;
+  align-items: center;
+  background-color: #2c2f36;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 25px 25px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: left 0.4s ease, background-color 0.3s ease;
+  z-index: 3;
+}
+
+.volver-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.volver-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.volver-btn:hover {
+  left: 0; 
+  background-color: #941b21;
+}
+
+.volver-btn:hover .volver-text {
+  opacity: 1; 
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to top, #252427, transparent);
+}
+
+.gray-card img{
+  object-fit: contain;
+  width: 100%;
+  height: 240px;
+}
+
+.juego-precio {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.juego-precio.cambiando {
+  color: #9acd32;
+  transform: scale(1.1);
+}
+
+.juego-edicion label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.juego-edicion select {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 50px;
+}
+
+.juego-descripcion {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.juego-etiquetas {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #3a3a3a;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #ddd;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.add-cart {
+  background: linear-gradient(90deg, #493636 0%, #6e1212 100%);
+  color: #ffffff;
+  width: 40%;
+  height: 50px;
+  margin: 20px;
+}
+
+.buy-now {
+  background: linear-gradient(90deg, #493636 0%, #6e1212 100%);
+  color: #ffffff;
+  box-shadow: 0 0 25px #db1313;
+  width: 40%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.precio-edicion{
+  background-color: #ffffff00;
+  box-shadow: 0 0 25px #2e2c2c;
+  border-radius: 18px;
+  padding: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc{
+  border-radius: 18px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-controls {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  right: 18px;
+  top: 18px;
+  backdrop-filter: blur(4px);
+}
+
+.banner-controls {
+  right: 18px;
+  top: 18px;
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.45);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.small-btn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logo-controls {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  width: 70%;
+  justify-content: center;
+}
+
+.tag-controls {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tag-select {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 42px;
+  min-width: 140px;
+}
+
+@media (max-width: 900px) {
+  .gray-card {
+    width: 80%;
+    left: 10%;
+    top: 8%;
+    height: auto;
+    position: relative;
+    margin: 20px auto;
+  }
+
+  .edit-controls {
+    position: static;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.btn-gradient-controls {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ddd;
+  gap: 0.6rem;
+  width: 80%;
+}
+
+.color-pickers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color-pickers label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.color-pickers input[type="color"] {
+  border: none;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.editar-precios {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 12px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.editar-precios input {
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 6px 10px;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.juego-descripcion {
+  width: 100%;
+  margin: 20px;
+  height: auto;
+  min-height: 300px;
+  resize: vertical;
+  background: rgba(31, 31, 31, 0.7);
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 10px 14px;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+.juego-descripcion:focus {
+  border-color: #9acd32;
+  background: rgba(31, 31, 31, 0.9);
+}
