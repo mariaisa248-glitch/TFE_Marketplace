@@ -32,11 +32,6 @@ searchInput.addEventListener("input", () => {
   });
 });
 
-
-
-
-
-
 const loginBtn = document.getElementById("login-btn");
 const loginModal = document.getElementById("login-modal");
 const loginSubmit = document.getElementById("login-submit");
