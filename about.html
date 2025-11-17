@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+  <div class="glow-bg"></div>
+
+  <header>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+  </header>
+
+  <div class="container">
+    <aside class="left-panel">
+      <div class="top-box">
+        <div class="top-box-in">
+          <div>
+
+          </div>
+          <img src="images/BOOST_Logo.png" alt="">
+            <a href="/index.html"><button class="in-button">Inicio</button></a>
+            <a href="/about.html"><button class="in-button">Sobre Nosotros</button></a>
+            <a href="/catalogo.html"><button class="in-button">Catálogo</button></a>
+        </div>
+      </div>
+       
+      <div class="login-container">
+        <button id="login-btn" class="left-panel-button">Iniciar sesión</button>
+      </div>
+     
+    </aside>
+
+
+    <main class="right-section">
+        <div class="about-container">
+            <h1>Sobre Nosotros</h1>
+            <p>
+            En <strong>BOOST</strong> somos un equipo apasionado por el desarrollo de experiencias interactivas que inspiran, emocionan y conectan a las personas.
+            </p>
+            <p>
+            Desde nuestros inicios, hemos buscado crear videojuegos que combinen arte, narrativa y tecnología, generando mundos inmersivos donde cada jugador pueda vivir su propia aventura.
+            </p>
+            <p>
+            Nuestro compromiso es impulsar la creatividad, apoyar a desarrolladores independientes y ofrecer un espacio donde los jugadores puedan descubrir nuevas historias, géneros y mecánicas únicas.
+            </p>
+            <p>
+            Gracias por acompañarnos en este viaje. ¡Apenas estamos comenzando!
+            </p>
+        </div>
+    </main>
+  </div>
+
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2>Iniciar Sesión</h2>
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" placeholder="Tu usuario">
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Tu contraseña">
+
+      <div class="modal-actions">
+        <button id="login-submit">Entrar</button>
+        <button id="login-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="about.js"></script>
+</body>
+</html>

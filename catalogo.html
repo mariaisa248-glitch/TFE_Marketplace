@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo</title>
+  <link rel="stylesheet" href="catalogo.css" />
+</head>
+
+<body>
+  <div class="glow-bg"></div>
+
+  <header>
+    <button id="menu-toggle" class="menu-btn">☰</button>
+  </header>
+
+  <div class="container">
+    <aside class="left-panel">
+      <div class="top-box">
+        <div class="top-box-in">
+          <div>
+
+          </div>
+          <img src="images/BOOST_Logo.png" alt="">
+            <a href="/index.html"><button class="in-button">Inicio</button></a>
+            <a href="/about.html"><button class="in-button">Sobre Nosotros</button></a>
+            <a href="/catalogo.html"><button class="in-button">Catálogo</button></a>
+        </div>
+      </div>
+       <div class="top-box-in">
+        Explora los juegos por género
+      </div>
+      <button class="left-panel-button filter-btn" data-genre="all">Ver todo</button>
+      <button class="left-panel-button filter-btn" data-genre="Aventura">Aventura</button>
+      <button class="left-panel-button filter-btn" data-genre="Terror">Terror</button>
+      <button class="left-panel-button filter-btn" data-genre="Cozy">Cozy</button>
+      <div class="top-box-in">
+        
+      </div>
+
+      <div class="login-container">
+        <button id="login-btn" class="left-panel-button">Iniciar sesión</button>
+      </div>
+     
+    </aside>
+
+
+    <main class="right-section">
+
+      <h1 class="catalog-title">Catálogo de Juegos</h1>
+
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar juegos por nombre...">
+      </div>
+
+      <div class="cards-container">
+
+        <div class="game-card" data-name="Red Dead Redemption" data-genre="Aventura">
+          <img src="images/RDR_Banner.jpg" alt="RDR">
+          <div class="game-info">
+            <h2>Red Dead Redemption</h2>
+            <span class="tag aventura">Aventura</span>
+            <button class="view-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="game-card" data-name="Madison" data-genre="Terror">
+          <img src="images/Madison_Banner.jpg" alt="Madison">
+          <div class="game-info">
+            <h2>Madison</h2>
+            <span class="tag terror">Terror</span>
+            <button class="view-btn">Ver detalles</button>
+          </div>
+        </div>
+
+        <div class="game-card" data-name="Fields of Mistria" data-genre="Cozy">
+          <img src="images/FOM_Banner.jpg" alt="FOM">
+          <div class="game-info">
+            <h2>Fields of Mistria</h2>
+            <span class="tag cozy">Cozy</span>
+            <button class="view-btn">Ver detalles</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2>Iniciar Sesión</h2>
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" placeholder="Tu usuario">
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Tu contraseña">
+
+      <div class="modal-actions">
+        <button id="login-submit">Entrar</button>
+        <button id="login-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="catalogo.js"></script>
+</body>
+</html>
