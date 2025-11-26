@@ -95,6 +95,11 @@ function showAllPanels() {
   showingAll = true;
 }
 
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const btnAventura = document.getElementById("btn-aventura");
 
